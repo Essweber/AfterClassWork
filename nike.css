@@ -1,0 +1,237 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,900&display=swap');
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #121313;
+}
+.big_container {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+.big_container .card{
+    
+    position: relative;
+    border-radius: 15px;
+    margin: 50px auto;
+    background-color: #2626267a;
+    width: 320px;
+    height: 450px;
+    overflow: hidden;
+}
+.big_container .card:hover{
+    transform-style: preserve-3d;
+transform: translateZ(20px);
+transform: perspective(4000px);
+    position: relative;
+    border-radius: 15px;
+    margin: 50px auto;
+    background-color: #2626267a;
+    width: 320px;
+    height: 450px;
+    overflow: hidden;
+}
+.big_container .card::before{
+   content: '';
+   position: absolute;
+   top:0px;
+   left: 0px;
+   width: 100%;
+   height: 100%;
+   background-color: #a5f230;
+   clip-path: circle(150px at 77% 22%);
+   transition: 0.5s ease-in-out;
+   
+}
+.big_container .card:hover:before{
+
+   clip-path: circle(300px at 78% -20%);
+
+}
+.big_container .card:after{
+
+   content: 'Nike';
+   position: absolute;
+   z-index: -4;
+   font-family: 'Poppins', sans-serif;
+   top: 32%;
+   left: -17%;
+   /* font-family:sans-serif Times, 'Times New Roman', serif; */
+   font-size: 12em;
+   font-weight: 800;
+   font-style: italic;
+   color: #303226;
+}
+.big_container .card:hover:after{
+
+  animation: bg_anim 0.5s infinite;
+  transition: 0.5s;
+}
+@keyframes bg_anim {
+    from {
+   color: #191a15;
+        
+    }
+    /* 50%{
+   color: #5b7a2c9c;
+        
+    } */
+    to {
+        color: #b9ff50;
+    }
+}
+img{
+    width: 100%;
+}
+.big_container .card .shoes{
+   position: absolute;
+  top: 51%;
+  transform: translate(10%, -33%) rotate(-25deg);
+  z-index: 1000;
+  width: 88%;
+  height: 220px;
+  transition: 0.5s;
+}
+.big_container .card:hover .shoes{
+  top: 25%;
+
+}
+
+
+
+            /* JE CONTINUE MOI MEME */
+
+
+.big_container .card .text_container{
+  position: absolute;
+  top: 70%;
+  padding: 40px;
+    height: 10px;
+    overflow: hidden;
+    transition: 1s;
+}
+.big_container .card:hover .text_container{
+  position: absolute;
+  top: 43.5%;
+    height: 100%;
+}
+
+.text_row{
+    font-family: Arial, Helvetica, sans-serif;
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+    margin: 10px;
+    justify-content: center;
+
+}
+.size{
+    margin-bottom: 26px;
+    letter-spacing: 2px;
+     transition-delay: 0.2s; 
+     transition-duration: 0.5s; 
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 300;
+    visibility: hidden;
+    opacity: 0;
+}
+.big_container .card:hover .size{
+    
+    visibility: visible;
+    opacity: 1;
+} 
+
+.color{
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 26px;
+    transition-delay: 0.4s; 
+     transition-duration: 0.7s; 
+    visibility: hidden;
+    opacity: 0;
+}
+.big_container .card:hover .color{
+    
+    visibility: visible;
+    opacity: 1;
+} 
+.top_txt{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin:auto;
+    margin-bottom: px;
+    letter-spacing: 1px;
+    transition-delay: 0.2s; 
+    font-size: 1.5rem;
+}
+.squaire{
+    transition: 0.5s;
+    width: 25px;
+    display: flex;
+    padding-left: 4px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    height: 25px;
+    color: black;
+    background-color: white;
+    margin-left: 10px;
+
+}
+.squaire:hover{
+    transition: 0.5s;
+    background-color: #a5f230;
+
+}
+.txt{
+transition: 0.5s;
+}
+.round_green{
+    width: 23px;
+    transition: 0.8s;
+    height: 23px;
+    margin-left: 10px;
+    border-radius: 50%;
+    background-color: #a5f230;
+}
+.round_blue{
+    width: 23px;
+    height: 23px;
+    margin-left: 10px;
+    border-radius: 50%;
+    background-color: #1ab9f3;
+}
+.round_rose{
+    width: 23px;
+    transition: 0.8s;
+    height: 23px;
+    margin-left: 10px;
+    border-radius: 50%;
+    background-color: #da0562;
+}
+button{
+    color: black;
+    transition: 0.8s;
+    background-color: white;
+    border-style:none ;
+    font-weight: bolder;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition-delay: 0.6s; 
+     transition-duration: 1s; 
+    visibility: hidden;
+    opacity: 0;
+    margin:auto;
+    cursor: pointer;
+    display: block;
+} 
+.big_container .card:hover button{
+    
+    visibility: visible;
+    opacity: 1;
+} 
